@@ -8,5 +8,83 @@
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
-  <body></body>
+  <body>
+    <!-- SITE-HEADER -->
+
+    <header class="site-header">
+      <div class="site-header__container container">
+        <div class="top-header">
+          <ul class="top-header__list">
+            <li class="top-header__item">
+              <a class="top-header__link" href="blank.html">Chat with us</a>
+            </li>
+            <li class="top-header__item">
+              <p class="top-header__text">+420 336 775 664</p>
+            </li>
+            <li class="top-header__item">
+              <p class="top-header__text">info@freshnesecom.com</p>
+            </li>
+          </ul>
+          <ul class="top-header__list">
+            <li class="top-header__item">
+              <a class="top-header__link" href="blank.html">Blog</a>
+            </li>
+            <li class="top-header__item">
+              <a class="top-header__link" href="blank.html">About us</a>
+            </li>
+            <li class="top-header__item">
+              <a class="top-header__link" href="blank.html">Careers</a>
+            </li>
+          </ul>
+        </div>
+        <div class="main-header">
+          <a class="site-header__logo" href="#">
+            <img
+              class="logo-img"
+              src="images/ic-logo.svg"
+              width="177"
+              height="50"
+              alt="site logo"
+            />
+          </a>
+          <form class="input-group" action="#">
+            <div class="input-group__container">
+              <input
+                class="categories-select"
+                name="categories"
+                placeholder="All categories"
+                id="categories"
+                list="category"
+              />
+              <datalist id="category">
+                <option>A</option>
+                <option>B</option>
+                <option>C</option>
+                <option>D</option>
+                <option>E</option>
+              </datalist>
+              <input
+                class="search-input"
+                type="search"
+                placeholder="Search Products, categories ..."
+                required
+              />
+              <button class="search-btn" id="button" type="submit"></button>
+            </div>
+          </form>
+          <ul class="main-header__list">
+            <li class="main-header__item">
+              <a class="main-header__link" href="#"></a>
+            </li>
+            <li class="main-header__item">
+              <a class="main-header__link" href="#"></a>
+            </li>
+          </ul>
+        </div>
+        <nav class="sitenav"></nav>
+      </div>
+    </header>
+
+    <!-- SITE-FOOTER -->
+  </body>
 </html>
