@@ -180,6 +180,7 @@ h5 {
   background-image: url(../images/ic-actions-search.svg);
   background-color: transparent;
   background-position: center center;
+  background-repeat: no-repeat;
 }
 .main-header__list {
   margin-left: auto;
@@ -317,10 +318,47 @@ h5 {
     align-self: flex-start;
   }
   .input-group {
+    margin: auto;
     order: 2;
-    align-self: center;
   }
   .main-header__list {
     order: 1;
+  }
+  .main-header__item:not(:last-child) {
+    margin-right: 10px;
+  }
+  .sitenav {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .input-group {
+    background: #fff;
+  }
+  .input-group__container {
+    background: #fff;
+    border: none;
+    flex-direction: column;
+  }
+
+  .categories-select,
+  .search-input {
+    padding: 8px 15px;
+    border: 1px solid var(--f1-border);
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  .categories-select {
+    width: 170px;
+    margin-right: 0;
+    padding: 5px;
+    text-align: center;
+  }
+  .search-btn {
+    padding: 15px;
+    background-color: var(--f5-bg);
+    border-radius: 5px;
   }
 }
