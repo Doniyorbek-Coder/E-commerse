@@ -300,3 +300,27 @@ h5 {
   font-size: 14px;
   line-height: 19px;
 }
+
+/* RESPONSIVENES */
+
+@media only screen and (max-width: 715px) {
+  .top-header {
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+  }
+  .main-header {
+    /* flex-direction: column; */
+  }
+  .site-header__logo {
+    margin: 0;
+    align-self: flex-start;
+  }
+  .input-group {
+    order: 2;
+    align-self: center;
+  }
+  .main-header__list {
+    order: 1;
+  }
+}
