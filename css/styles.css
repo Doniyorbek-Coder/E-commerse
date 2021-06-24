@@ -97,6 +97,9 @@ h5 {
 
 /* MAIN STYLES */
 
+.site-content {
+  margin-top: 233px;
+}
 /* TOP-HEADER */
 .top-header {
   padding: 16px 0;
@@ -121,6 +124,17 @@ h5 {
 }
 .top-header__link {
   text-decoration: none;
+  color: var(--light-green);
+}
+.top-header__link:hover {
+  color: var(--btn-border);
+  text-decoration: underline;
+}
+.top-header__link--dark {
+  color: var(--dark);
+  transition: all 0.3s ease-in-out;
+}
+.top-header__link--dark:hover {
   color: var(--light-green);
 }
 .top-header__text {
@@ -231,6 +245,9 @@ h5 {
   align-items: center;
   flex-wrap: wrap;
 }
+.sitenav-item {
+  position: relative;
+}
 .sitenav-item:not(:last-child) {
   margin-right: 40px;
 }
@@ -244,7 +261,10 @@ h5 {
   color: var(--dark);
   display: flex;
   align-items: center;
+  transition: all 0.3s ease-in-out;
+  position: relative;
 }
+
 .sitenav-link::after {
   margin-left: 2px;
   width: 16px;
@@ -253,9 +273,149 @@ h5 {
   background-repeat: no-repeat;
   content: '';
   background-image: url(../images/ic-chevron-down.svg);
+  transition: all 0.3s ease-in-out;
+}
+.sitenav__list {
+  z-index: 111;
+  display: none;
+  padding: 20px;
+  margin: 0;
+  list-style-type: none;
+  position: absolute;
+  left: 50%;
+  transition: all 0.3s ease-in-out;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 24px rgb(0 0 0 / 10%);
+  transform: translateX(-50%);
+}
+.sitenav__link {
+  text-decoration: none;
+  color: var(--light-green);
+  font-size: 16px;
 }
 
+.sitenav-link:hover {
+  color: #6a983c;
+}
+
+.sitenav-item:hover .sitenav__list {
+  display: block;
+}
+.sitenav-item:hover .sitenav-link::after {
+  transform: rotate(-180deg);
+}
+
+/* MAIN */
+.category {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+.category__container {
+  display: flex;
+}
+.heading-recepies {
+  width: 100%;
+  display: flex;
+}
+.section-menu {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+}
+.section-menu__title {
+  margin-bottom: 16px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+}
+.section-menu__list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+.section-menu__item:not(:last-child) {
+  margin-bottom: 12px;
+}
+.section-menu__link {
+  font-size: 14px;
+  line-height: 19px;
+  color: var(--light-green);
+}
+.section-menu__button {
+  display: flex;
+  margin-top: auto;
+}
+.section-menu__button_link {
+  background: var(--f5-bg);
+  border: 2px solid transparent;
+}
+.section-menu__button_link:hover {
+  color: #fff;
+}
+.section-menu__button_link::after {
+  background-image: url(../images/ic-chevron-right-black.png);
+}
+.btn {
+  padding: 12px 16px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--dark);
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 22px;
+  transition: all 0.3s ease-in-out;
+}
+.btn::after {
+  margin-left: 6px;
+  content: '';
+  width: 17px;
+  height: 17px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.btn:hover::after {
+  background-image: url(../images/ic-arrow-white-right.svg);
+}
+.heading-recepies__card {
+  padding: 48px 33px 32px;
+  background: url(../images/ic-recepies-bg.png) no-repeat center center;
+  background-color: rgba(106, 152, 60, 0.1);
+  background-size: cover;
+  border-radius: 12px;
+  flex: 1;
+}
+.heading-recepies__card:not(:last-child) {
+  margin-right: 32px;
+}
+.heading-recepies__card_subtitle {
+  margin: 0;
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--light-green);
+}
+.heading-recepies__card_title {
+  margin: 0;
+  margin-bottom: 94px;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 33px;
+}
+.heading-recepies__card_button {
+  display: flex;
+}
+.heading-recepies__card_link {
+  border: 2px solid #92c064;
+}
+.heading-recepies__card_link::after {
+  background-image: url(../images/ic-chevron-right.png);
+}
 /* FOOTER */
+
 .site-footer {
   padding: 64px 0;
 }
@@ -289,6 +449,9 @@ h5 {
   line-height: 19px;
   color: var(--light-green);
 }
+.site-footer__link:hover {
+  text-decoration: underline;
+}
 .footer-tags {
   display: flex;
   flex-wrap: wrap;
@@ -306,6 +469,11 @@ h5 {
   font-weight: 600;
   font-size: 12px;
   line-height: 18px;
+  transition: all 0.3s ease-out;
+}
+.footer-tags__link:hover {
+  background: var(--light-green);
+  color: var(--f1-border);
 }
 .copyright {
   font-size: 14px;
@@ -374,7 +542,12 @@ h5 {
   .footer-tags__link {
     margin: 5px 10px;
   }
-
+  /* ******************** */
+  .sitenav__list {
+    position: unset;
+    transform: translateX(0);
+    text-align: center;
+  }
   /* ****************** */
 
   .header__burger.active {
